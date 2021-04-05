@@ -1,0 +1,90 @@
+.historialSiniestros {
+    width: 100%;
+    border-top: 0.5px solid #D1D1D1;
+    .rowHeader {
+        display: flex;
+        width: 100%;
+        font-size: 0.75rem;
+        font-weight: bold;
+        color: #192E47;
+        padding-left: 1rem;
+        .column {
+            width: 100%;
+        }
+        .cl-350{
+            min-width: 21.875rem;
+        }
+        .cl-250{
+            min-width: 15.625rem;
+        }
+    }
+    .row {
+        display: flex;
+        width: 100%;
+        border: 1px solid #B2B2B2;
+        border-radius: 10px;
+        height: 3.5rem;
+        align-items: center;
+        margin: 0.9375rem 0;
+        font-size: 1rem;
+        color: #707070;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        box-sizing: border-box;
+        cursor: pointer;
+        .column {
+            width: 100%;
+        }
+        .content-icon{
+            display: flex;
+            justify-content: space-between;
+            svg{
+                width: 16px;
+                height: 16px;
+                margin-right: 10px;
+            }
+            span{
+                display: flex;
+                align-items: center;
+            }
+        }
+        .cl-350{
+            min-width: 21.875rem;
+        }
+        .cl-250{
+            min-width: 15.625rem;
+        }
+    }
+
+    .rowPrincipal {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        font-size: 1rem;
+        margin-top: 40px;
+        margin-bottom: 31px;
+        .column {
+            width: 100%;
+            .title{
+                font-size: 30px;
+                color: #192E47;
+                font-weight: bold;
+            }
+            .subtitle {
+                font-size: 15px;
+                color: #FF8D36;
+            }
+        }
+        .content-right {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .content-center {
+            display: flex;
+            justify-content: center;
+        }
+        .space {
+            width: 20px;
+        }
+    }
+}

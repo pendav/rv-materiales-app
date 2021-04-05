@@ -1,0 +1,21 @@
+.header {
+    width: 100%;
+    height: 4.6875rem;
+    background-color: #346298;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    .space {
+        flex: 1;
+    }
+    .wrapName {
+        text-align: right;
+        margin-right: 1.9375rem;
+        .name {
+            font-size: 1.125rem;
+        }
+        .position {
+            font-size: 0.75rem;
+        }
+    }
+}

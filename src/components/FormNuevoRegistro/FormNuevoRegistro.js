@@ -271,57 +271,175 @@ function FormSiniestros() {
                             </Select>
                         </FormControl>
                     </div>
+                    <div className="column">                    
+                    </div>
+                    <div className="column">                    
+                    </div>
+                    <div className="column">                    
+                    </div>
+                    <div className="column">                    
+                    </div>
                             
             </div>
-
             <div className="row">
                 <div className="column">
-                    <div className="column">
-                        <TextField id="ImporteFactura" label="Importe de factura" className="textField" variant="outlined" size="small" />
-                    </div>
-                    <div className="column">
-                        <TextField id="Relacion" label="Relación" className="textField" variant="outlined" size="small" />
-                    </div>
-                </div>
-                <div className="column-lg">
-                    <TextField id="Observaciones" label="Observaciones" className="textField" variant="outlined" size="small" />
-                </div>
-                <div className="column-sm">
-                    <TextField id="PagoFactura" label="Pago de factura" className="textField" variant="outlined" size="small" />
-                </div>
-            </div>
-            <div className="row">
-                <div className="column">
-                    <TextField id="DocumentacionEntregada" label="Documentación Entregada" className="textField" variant="outlined" size="small" />
+                    <TextField id="TipoMaterial" label="Tipo de material" className="textField" variant="outlined" size="small" />
                 </div>
                 <div className="column">
-                    <TextField id="DocumentacionFaltante" label="Documentación Faltante" className="textField" variant="outlined" size="small" />
-                </div>
-            </div>
-            <div className="row">
-                <div className="column">
-                    <TextField id="Comentarios" label="Comentarios" className="textField" variant="outlined" size="small" />
-                </div>
-                <div className="column">
-                    <div className="column">
-                        <FormControl variant="outlined" className="textField" size="small">
+                <FormControl variant="outlined" className="textField" size="small">
                             <InputLabel htmlFor="outlined-estatus">Estatus</InputLabel>
                             <Select
                                 labelId="outlined-estatus"
-                                id="estatus"
-                                label="Estatus"
-                            >
-                                <MenuItem value={'Pagado'}>Pagado</MenuItem>
+                                id="escalado"
+                                label="Escalado"                            >
+                                <MenuItem value={'Mapfre'}>Mapfre</MenuItem>
                             </Select>
                         </FormControl>
-                    </div>
-                    <div className="column">
-                        <Button variant="contained" color="secondary" className="button">
-                            Guardar
-                        </Button>
-                    </div>
+
+                </div>
+                <div className="column">
+                <FormControl variant="outlined" className="textField" size="small">
+                            <InputLabel htmlFor="outlined-estatus">Estatus</InputLabel>
+                            <Select
+                                labelId="outlined-estatus"
+                                id="area"
+                                label="Área"                            >
+                                <MenuItem value={'Mapfre'}>Mapfre</MenuItem>
+                            </Select>
+                        </FormControl>
+
+                </div>
+                <div className="column">
+                <MuiPickersUtilsProvider utils={DateFnsUtils} locale={esLocale}>
+                            <KeyboardDatePicker
+                                disableToolbar
+                                variant="inline"
+                                format="dd/MM/yyyy"
+                                id="date-picker-inline"
+                                inputVariant="outlined"
+                                size="small"
+                                label="Fecha de escalación"
+                                InputAdornmentProps={{ position: "start" }}
+                                value={selectedDate}
+                                onChange={handleDateChange}
+                            />
+                        </MuiPickersUtilsProvider>
+                </div>
+                <div className="column">
+                <MuiPickersUtilsProvider utils={DateFnsUtils} locale={esLocale}>
+                            <KeyboardDatePicker
+                                disableToolbar
+                                variant="inline"
+                                format="dd/MM/yyyy"
+                                id="date-picker-inline"
+                                inputVariant="outlined"
+                                size="small"
+                                label="Fecha de resolución"
+                                InputAdornmentProps={{ position: "start" }}
+                                value={selectedDate}
+                                onChange={handleDateChange}
+                            />
+                        </MuiPickersUtilsProvider>
                 </div>
             </div>
+            <div className="row">
+                <div className="column">
+                    <TextField id="Proveedor" label="Proveedor" className="textField" variant="outlined" size="small" />
+                </div>
+                <div className="column">
+                    <TextField id="Ruta" label="Ruta" className="textField" variant="outlined" size="small" />
+                </div>
+                <div className="column">
+                    <TextField id="Caja" label="Caja" className="textField" variant="outlined" size="small" />
+                </div>
+            </div>
+            <div className="row">
+                <div className="column-max">
+                    <TextField id="Comentarios" label="Comentarios" className="textField" variant="outlined" size="small" multiline rows={4} />
+                </div>
+            </div>
+            <div className="row">
+                <div className="column-max">
+                    <TextField id="Observaciones" label="Observaciones por diferencias y cancelaciones" className="textField" variant="outlined" size="small" multiline rows={4} />
+                </div>
+            </div>
+            <div className="row">
+                <div className="column">
+                    <div className="column">
+                        <MuiPickersUtilsProvider utils={DateFnsUtils} locale={esLocale}>
+                            <KeyboardDatePicker
+                                disableToolbar
+                                variant="inline"
+                                format="dd/MM/yyyy"
+                                id="date-picker-inline"
+                                inputVariant="outlined"
+                                size="small"
+                                label="Fecha de 1er notificación a RM"
+                                InputAdornmentProps={{ position: "start" }}
+                                value={selectedDate}
+                                onChange={handleDateChange}
+                            />
+                        </MuiPickersUtilsProvider>
+                    </div>
+                    <div className="column">
+                        <MuiPickersUtilsProvider utils={DateFnsUtils} locale={esLocale}>
+                            <KeyboardDatePicker
+                                disableToolbar
+                                variant="inline"
+                                format="dd/MM/yyyy"
+                                id="date-picker-inline"
+                                inputVariant="outlined"
+                                size="small"
+                                label="Fecha de 2da notificación a RM"
+                                InputAdornmentProps={{ position: "start" }}
+                                value={selectedDate}
+                                onChange={handleDateChange}
+                            />
+                        </MuiPickersUtilsProvider>
+                    </div>
+                    <div className="column">
+                        <MuiPickersUtilsProvider utils={DateFnsUtils} locale={esLocale}>
+                            <KeyboardDatePicker
+                                disableToolbar
+                                variant="inline"
+                                format="dd/MM/yyyy"
+                                id="date-picker-inline"
+                                inputVariant="outlined"
+                                size="small"
+                                label="Fecha de 3ra notificación a RM"
+                                InputAdornmentProps={{ position: "start" }}
+                                value={selectedDate}
+                                onChange={handleDateChange}
+                            />
+                        </MuiPickersUtilsProvider>
+                    </div>
+                </div>
+                <div className="column">
+                    <div className="column">
+                        <MuiPickersUtilsProvider utils={DateFnsUtils} locale={esLocale}>
+                            <KeyboardDatePicker
+                                disableToolbar
+                                variant="inline"
+                                format="dd/MM/yyyy"
+                                id="date-picker-inline"
+                                inputVariant="outlined"
+                                size="small"
+                                label="Fecha de emisión de cheque"
+                                InputAdornmentProps={{ position: "start" }}
+                                value={selectedDate}
+                                onChange={handleDateChange}
+                            />
+                        </MuiPickersUtilsProvider>
+                    </div>
+                    <div className="column">
+                    <Button variant="contained" color="secondary" className="button">
+                        Guardar
+                    </Button>
+                    </div>                
+                </div>
+            </div>
+
+          
         </form>
     )
 }

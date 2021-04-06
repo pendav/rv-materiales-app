@@ -12,6 +12,7 @@ import Historial from '../Historial/Historial';
 import Usuarios from '../Usuarios/Usuarios';
 import Siniestro from '../Siniestro/Siniestro';
 import NuevoRegistro from '../NuevoRegistro/NuevoRegistro';
+import NuevoReporte from '../Reportes/Reportes';
 
 function Home() {
     return (
@@ -34,6 +35,9 @@ function Home() {
                         </Route>
                         <Route path="/home/usuarios">
                             <Usuarios />
+                        </Route>
+                        <Route path="/home/reportes">
+                            <NuevoReporte />
                         </Route>
                         <Route path="/home/siniestro">
                             <Siniestro />

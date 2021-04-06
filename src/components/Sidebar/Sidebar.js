@@ -3,6 +3,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
+import Header from '../../components/Header/Header';
 import { makeStyles } from '@material-ui/core/styles';
 import { ReactComponent as Add } from '../../assets/img/add.svg';
 import { ReactComponent as Beneficiario } from '../../assets/img/beneficiario.svg';
@@ -14,13 +15,15 @@ import './Sidebar.scss'
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        width: '90%',
+        width: '100%',
         maxWidth: 360,
         color: theme.palette.common.white,
         marginTop: 44
     },
     list: {
-        marginBottom: 18
+        width: '90%',
+        marginBottom: 18,
+        marginLeft: 20
     }
 }));
 
@@ -38,13 +41,8 @@ const Sidebar = props => {
 
     return (
         <div className={classes.root}>
+            <Header/>
             <List component="nav" aria-label="sidebar">
-                <ListItem button className={classes.list} onClick={() => handleListItemClick('siniestros')}>
-                    <ListItemIcon>
-                        <SvgIcon component={Add} viewBox="0 0 30 30"/>
-                    </ListItemIcon>
-                    <ListItemText primary="Siniestros" />
-                </ListItem>
                 <ListItem button className={classes.list} onClick={() => handleListItemClick('historial')}>
                     <ListItemIcon>
                         <SvgIcon component={MiCuenta} viewBox="0 0 30 30"/>
@@ -63,7 +61,19 @@ const Sidebar = props => {
                     </ListItemIcon>
                     <ListItemText primary="Usuarios" />
                 </ListItem>
-                <ListItem button onClick={() => handleClose()}>
+                <ListItem button className={classes.list} onClick={() => handleListItemClick('reportes')}>
+                    <ListItemIcon>
+                        <SvgIcon component={Beneficiario} viewBox="0 0 30 30"/>
+                    </ListItemIcon>
+                    <ListItemText primary="Reportes" />
+                </ListItem>
+                <ListItem button className={classes.list} onClick={() => handleListItemClick('reclamo')}>
+                    <ListItemIcon>
+                        <SvgIcon component={Add} viewBox="0 0 30 30"/>
+                    </ListItemIcon>
+                    <ListItemText primary="Nuevo Reclamo" />
+                </ListItem>
+                <ListItem button className={classes.list} onClick={() => handleClose()}>
                     <ListItemIcon>
                         <SvgIcon component={Logout} viewBox="0 0 30 30"/>
                     </ListItemIcon>

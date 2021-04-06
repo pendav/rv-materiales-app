@@ -10,7 +10,6 @@ import {
 import Siniestros from '../Siniestros/Siniestros';
 import Historial from '../Historial/Historial';
 import Usuarios from '../Usuarios/Usuarios';
-import Header from '../../components/Header/Header';
 import Siniestro from '../Siniestro/Siniestro';
 import NuevoRegistro from '../NuevoRegistro/NuevoRegistro';
 
@@ -23,7 +22,6 @@ function Home() {
                     <Sidebar></Sidebar>
                 </div>
                 <div className="main">
-                    <Header/>
                     <Switch>
                         <Route path="/home/siniestros">
                             <Siniestros />

@@ -21,18 +21,6 @@ function FilterUsuarios() {
                 </div>
                 <div className="column">
                     <FormControl variant="outlined" className="textField" size="small">
-                        <InputLabel htmlFor="outlined-sucursal">Sucursal</InputLabel>
-                        <Select
-                            labelId="outlined-sucursal"
-                            id="sucursal"
-                            label="sucursal"
-                        >
-                            <MenuItem value={'Test'}>Test</MenuItem>
-                        </Select>
-                    </FormControl>
-                </div>
-                <div className="column">
-                    <FormControl variant="outlined" className="textField" size="small">
                         <InputLabel htmlFor="outlined-tipoAdmin">Tipo de admin</InputLabel>
                         <Select
                             labelId="outlined-tipoAdmin"

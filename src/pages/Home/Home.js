@@ -13,6 +13,7 @@ import Usuarios from '../Usuarios/Usuarios';
 import Siniestro from '../Siniestro/Siniestro';
 import NuevoRegistro from '../NuevoRegistro/NuevoRegistro';
 import NuevoReporte from '../Reportes/Reportes';
+import Reclamo from '../Reclamo/Reclamo';
 
 function Home() {
     return (
@@ -41,6 +42,9 @@ function Home() {
                         </Route>
                         <Route path="/home/siniestro">
                             <Siniestro />
+                        </Route>
+                        <Route path="/home/reclamo">
+                            <Reclamo />
                         </Route>
                     </Switch>
                 </div>

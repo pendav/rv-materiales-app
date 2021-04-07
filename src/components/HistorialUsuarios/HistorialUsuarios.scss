@@ -42,7 +42,7 @@
             }
         }
         .cl-50 {
-            max-width: 100px;
+            max-width: 105px;
         }
     }
 
@@ -150,5 +150,13 @@
     }
     .textField {
         width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1397px) {
+    .dialog {
+        .dot {
+            top: 10%;
+        }
     }
 }

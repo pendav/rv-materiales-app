@@ -5,7 +5,7 @@ import {
     DialogContent,
     DialogActions,
     TextField, Select, InputLabel,
-    FormControl, MenuItem
+    FormControl, MenuItem, Switch
 } from "@material-ui/core";
 import './HistorialUsuarios.scss';
 import SvgIcon from "@material-ui/core/SvgIcon";
@@ -18,6 +18,13 @@ import { useDialog } from "../../context/DialogProvider";
 
 function HistorialUsuarios() {
     const [openDialog, closeDialog] = useDialog();
+    const [state, setState] = React.useState({
+        checkedB: true,
+    });
+
+    const handleChange = (event) => {
+        setState({ ...state, [event.target.name]: event.target.checked });
+    };
 
     const onOpenDialog = (action, name) => {
         const label = action === 'delete'
@@ -29,7 +36,7 @@ function HistorialUsuarios() {
         openDialog({
             children: (
                 <div className="dialog">
-                    <div className="dot"><SvgIcon component={action === 'delete' ? TitleDelete : TitleEdit} viewBox="0 0 41 47"/></div>
+                    <div className="dot"><SvgIcon component={action === 'delete' ? TitleDelete : TitleEdit} viewBox="0 0 41 47" /></div>
                     <DialogTitle className="titleDialog">{label}</DialogTitle>
                     <DialogContent className="contentDialog">
                         {action === 'delete' ? name : null}
@@ -101,16 +108,15 @@ function HistorialUsuarios() {
                 <div className="column">USUARIO</div>
                 <div className="column">CORREO ELECTRÓNICO</div>
                 <div className="column">CONTRASEÑA</div>
-                <div className="column">SUCURSAL</div>
                 <div className="column">TIPO DE ADMIN</div>
                 <div className="column cl-50">EDITAR</div>
                 <div className="column cl-50">ELIMINAR</div>
+                <div className="column cl-50">PERMISOS</div>
             </div>
             <div className="row">
                 <div className="column">Felipe Ramírez</div>
                 <div className="column">hsdfgvfsdh@hotmail.com</div>
                 <div className="column">ajsvfsdklnklded45</div>
-                <div className="column">CDMX MATRIZ</div>
                 <div className="column">Administrador General</div>
                 <div className="column cl-50 content-icon">
                     <SvgIcon component={Edit} onClick={() => { onOpenDialog('edit', 'Felipe Ramírez') }} />
@@ -118,12 +124,20 @@ function HistorialUsuarios() {
                 <div className="column cl-50 content-icon">
                     <SvgIcon component={Delete} onClick={() => { onOpenDialog('delete', 'Felipe Ramírez') }} />
                 </div>
+                <div className="column cl-50 content-icon">
+                    <Switch
+                        checked={state.checkedB}
+                        onChange={handleChange}
+                        color="secondary"
+                        name="checkedB"
+                        inputProps={{ 'aria-label': 'primary checkbox' }}
+                    />
+                </div>
             </div>
             <div className="row">
                 <div className="column">Felipe Ramírez</div>
                 <div className="column">hsdfgvfsdh@hotmail.com</div>
                 <div className="column">ajsvfsdklnklded45</div>
-                <div className="column">CDMX MATRIZ</div>
                 <div className="column">Administrador General</div>
                 <div className="column cl-50 content-icon">
                     <SvgIcon component={Edit} onClick={() => { onOpenDialog('edit', 'Felipe Ramírez') }} />
@@ -131,12 +145,20 @@ function HistorialUsuarios() {
                 <div className="column cl-50 content-icon">
                     <SvgIcon component={Delete} onClick={() => { onOpenDialog('delete', 'Felipe Ramírez') }} />
                 </div>
+                <div className="column cl-50 content-icon">
+                    <Switch
+                        checked={state.checkedB}
+                        onChange={handleChange}
+                        color="secondary"
+                        name="checkedB"
+                        inputProps={{ 'aria-label': 'primary checkbox' }}
+                    />
+                </div>
             </div>
             <div className="row">
                 <div className="column">Felipe Ramírez</div>
                 <div className="column">hsdfgvfsdh@hotmail.com</div>
                 <div className="column">ajsvfsdklnklded45</div>
-                <div className="column">CDMX MATRIZ</div>
                 <div className="column">Administrador General</div>
                 <div className="column cl-50 content-icon">
                     <SvgIcon component={Edit} onClick={() => { onOpenDialog('edit', 'Felipe Ramírez') }} />
@@ -144,18 +166,35 @@ function HistorialUsuarios() {
                 <div className="column cl-50 content-icon">
                     <SvgIcon component={Delete} onClick={() => { onOpenDialog('delete', 'Felipe Ramírez') }} />
                 </div>
+                <div className="column cl-50 content-icon">
+                    <Switch
+                        checked={state.checkedB}
+                        onChange={handleChange}
+                        color="secondary"
+                        name="checkedB"
+                        inputProps={{ 'aria-label': 'primary checkbox' }}
+                    />
+                </div>
             </div>
             <div className="row">
                 <div className="column">Felipe Ramírez</div>
                 <div className="column">hsdfgvfsdh@hotmail.com</div>
                 <div className="column">ajsvfsdklnklded45</div>
-                <div className="column">CDMX MATRIZ</div>
                 <div className="column">Administrador General</div>
                 <div className="column cl-50 content-icon">
                     <SvgIcon component={Edit} onClick={() => { onOpenDialog('edit', 'Felipe Ramírez') }} />
                 </div>
                 <div className="column cl-50 content-icon">
                     <SvgIcon component={Delete} onClick={() => { onOpenDialog('delete', 'Felipe Ramírez') }} />
+                </div>
+                <div className="column cl-50 content-icon">
+                    <Switch
+                        checked={state.checkedB}
+                        onChange={handleChange}
+                        color="secondary"
+                        name="checkedB"
+                        inputProps={{ 'aria-label': 'primary checkbox' }}
+                    />
                 </div>
             </div>
         </div>

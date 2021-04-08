@@ -287,7 +287,7 @@ function FormSiniestros() {
                 </div>
                 <div className="column">
                 <FormControl variant="outlined" className="textField" size="small">
-                            <InputLabel htmlFor="outlined-estatus">Estatus</InputLabel>
+                            <InputLabel htmlFor="outlined-estatus">Escalado</InputLabel>
                             <Select
                                 labelId="outlined-estatus"
                                 id="escalado"
@@ -299,7 +299,7 @@ function FormSiniestros() {
                 </div>
                 <div className="column">
                 <FormControl variant="outlined" className="textField" size="small">
-                            <InputLabel htmlFor="outlined-estatus">Estatus</InputLabel>
+                            <InputLabel htmlFor="outlined-estatus">Área</InputLabel>
                             <Select
                                 labelId="outlined-estatus"
                                 id="area"
@@ -351,6 +351,12 @@ function FormSiniestros() {
                 </div>
                 <div className="column">
                     <TextField id="Caja" label="Caja" className="textField" variant="outlined" size="small" />
+                </div>
+                <div className="column">
+                    
+                </div>
+                <div className="column">
+                    
                 </div>
             </div>
             <div className="row">

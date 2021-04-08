@@ -21,6 +21,11 @@
                 color: #192e47;
                 font-weight: bold;
             }
+            .date {
+                font-size: 1rem;
+                color: #707070;
+                font-weight: normal !important;
+            }
             .miniTitle {
                 color: #192e47;
                 font-size: 0.875rem;
@@ -45,7 +50,7 @@
             justify-content: space-between;
             svg {
                 width: 1.5rem;
-                height: 1.5rem;
+                height: 1rem;
                 margin-right: 0.625rem;
             }
             span {

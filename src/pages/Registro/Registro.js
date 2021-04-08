@@ -2,21 +2,21 @@ import React from 'react'
 import SvgIcon from "@material-ui/core/SvgIcon";
 import Button from '@material-ui/core/Button';
 import { withRouter } from 'react-router-dom';
-import './Siniestro.scss'
+import './Registro.scss'
 import logoMapfre from '../../assets/img/mapfre.png';
 import { ReactComponent as Close } from '../../assets/img/close.svg';
 import { ReactComponent as Excel } from '../../assets/img/excel.svg';
 import { ReactComponent as Regresar } from '../../assets/img/back_button.svg';
 import { ReactComponent as Edit } from '../../assets/img/edit.svg';
 
-function Siniestro(props) {
+function Registro(props) {
     const { history } = props;
     const defaultPath = '/home/';
     const handleListItemClick = (url) => {
         history.push(`${defaultPath}${url}`);
     };
     return (
-        <div className="siniestro">
+        <div className="registro">
             <div className="content-icon-header" onClick={() => handleListItemClick('historial')}>
                 <SvgIcon component={Regresar} viewBox="0 0 30 30" />Regresar
                 <div style={{display: 'flex', width: '100%', justifyContent: 'flex-end'}}><SvgIcon component={Edit} viewBox="0 0 25 25" /></div>
@@ -241,7 +241,7 @@ function Siniestro(props) {
                         <span>
                             <SvgIcon component={Close} viewBox="0 0 22 22" />
                         Pagado
-                    </span>
+                        </span>
                     </div>
                     <div className="column content-right">
                         <Button variant="contained" style={{ backgroundColor: '#4CAF50', color: '#FFFFFF' }}>
@@ -256,4 +256,4 @@ function Siniestro(props) {
     )
 }
 
-export default withRouter(Siniestro);
+export default withRouter(Registro);

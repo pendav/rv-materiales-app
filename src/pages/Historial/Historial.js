@@ -1,13 +1,13 @@
 import React from 'react'
 import FilterSiniestros from '../../components/FilterSiniestros/FilterSiniestros'
-import HistorialSiniestros from '../../components/HistorialSiniestros/HistorialSiniestros'
+import HistorialRegistros from '../../components/HistorialRegistros/HistorialRegistros'
 import './Historial.scss'
 
 function Historial() {
     return (
         <div className="historial">
             <FilterSiniestros></FilterSiniestros>
-            <HistorialSiniestros title="Listado de siniestros"></HistorialSiniestros>
+            <HistorialRegistros title="Resultados de busqueda"></HistorialRegistros>
         </div>
     )
 }

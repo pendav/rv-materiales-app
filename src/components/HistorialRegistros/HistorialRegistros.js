@@ -1,23 +1,24 @@
 import React from 'react';
 import Pagination from '@material-ui/lab/Pagination';
-import './HistorialSiniestros.scss';
+import './HistorialRegistros.scss';
 import SvgIcon from "@material-ui/core/SvgIcon";
 import { ReactComponent as Back } from '../../assets/img/back.svg';
 import { ReactComponent as Checked } from '../../assets/img/checked.svg';
 import { ReactComponent as Excel } from '../../assets/img/excel.svg';
 import { ReactComponent as Close } from '../../assets/img/close.svg';
 import { ReactComponent as Alert } from '../../assets/img/alert.svg';
+import { ReactComponent as Rejected } from '../../assets/img/rejected.svg';
 import Button from '@material-ui/core/Button';
 import { withRouter } from 'react-router-dom';
 
-function HistorialSiniestros(props) {
+function HistorialRegistros(props) {
     const { title, history } = props;
     const defaultPath = '/home/';
     const handleListItemClick = (url) => {
         history.push(`${defaultPath}${url}`);
     };
     return (
-        <div className="historialSiniestros">
+        <div className="historialRegistros">
             <div className="rowPrincipal">
                 <div className="column">
                     <div className="title">{title}</div>
@@ -35,19 +36,19 @@ function HistorialSiniestros(props) {
                 </div>
             </div>
             <div className="rowHeader">
-                <div className="column cl-350">ASEGURADO</div>
-                <div className="column cl-250">COMPAÑIA DE SEGUROS</div>
-                <div className="column cl-250">POLIZA</div>
-                <div className="column">FECHA</div>
-                <div className="column">AJUSTADOR</div>
+                <div className="column">REF. CLAIM</div>
+                <div className="column">LOCALIDAD</div>
+                <div className="column cl-250">TRANSPORTISTA</div>
+                <div className="column">TIPO DE DAÑO</div>
+                <div className="column">FECHA DE EVENTO</div>
                 <div className="column">ESTATUS</div>
             </div>
-            <div className="row" onClick={() => handleListItemClick('siniestro')}>
-                <div className="column cl-350">Premium Restaurant Brands, S. de R.L. de C.V.</div>
-                <div className="column cl-250">MAPFRE</div>
-                <div className="column cl-250">3932000000032</div>
-                <div className="column">10/12/2020</div>
-                <div className="column">Jaime Flores</div>
+            <div className="row" onClick={() => handleListItemClick('registro')}>
+                <div className="column">2N-2021-001</div>
+                <div className="column">Ramos</div>
+                <div className="column">DSV</div>
+                <div className="column">Discrepancia</div>
+                <div className="column">26/08/2020</div>
                 <div className="column content-icon">
                     <span>
                         <SvgIcon component={Checked} viewBox="0 0 22 22" />
@@ -56,30 +57,44 @@ function HistorialSiniestros(props) {
                     <SvgIcon component={Back} viewBox="0 0 16 16" />
                 </div>
             </div>
-            <div className="row" onClick={() => handleListItemClick('siniestro')}>
-                <div className="column cl-350">Serafina Villanueva Sauri</div>
-                <div className="column cl-250">MAPFRE</div>
-                <div className="column cl-250">3100500002526</div>
-                <div className="column">08/12/2020</div>
-                <div className="column">Mariela Cruz</div>
+            <div className="row" onClick={() => handleListItemClick('registro')}>
+                <div className="column">2R-2020-074</div>
+                <div className="column">Silao</div>
+                <div className="column">Penske LLP</div>
+                <div className="column">Robo</div>
+                <div className="column">02/12/2020</div>
                 <div className="column content-icon">
                     <span>
                         <SvgIcon component={Close} viewBox="0 0 22 22" />
-                            Pagado
+                        Cancelado
                         </span>
                     <SvgIcon component={Back} viewBox="0 0 16 16" />
                 </div>
             </div>
-            <div className="row" onClick={() => handleListItemClick('siniestro')}>
-                <div className="column cl-350">Anareli Melo Vidal</div>
-                <div className="column cl-250">BANORTE</div>
-                <div className="column cl-250">CAHA1001825</div>
-                <div className="column">07/12/2020</div>
-                <div className="column">Radames Rivera</div>
+            <div className="row" onClick={() => handleListItemClick('registro')}>
+                <div className="column">2R-2020-070</div>
+                <div className="column">Silao</div>
+                <div className="column">DSV</div>
+                <div className="column">Discrepancia</div>
+                <div className="column">24/11/2020</div>
                 <div className="column content-icon">
                     <span>
                         <SvgIcon component={Alert} viewBox="0 0 22 22" />
-                            Pagado
+                        En proceso
+                        </span>
+                    <SvgIcon component={Back} viewBox="0 0 16 16" />
+                </div>
+            </div>
+            <div className="row" onClick={() => handleListItemClick('registro')}>
+                <div className="column">2R-2020-070</div>
+                <div className="column">Silao</div>
+                <div className="column">DSV</div>
+                <div className="column">Discrepancia</div>
+                <div className="column">24/11/2020</div>
+                <div className="column content-icon">
+                    <span>
+                        <SvgIcon component={Rejected} viewBox="0 0 22 22" />
+                        Rechazado
                         </span>
                     <SvgIcon component={Back} viewBox="0 0 16 16" />
                 </div>
@@ -88,4 +103,4 @@ function HistorialSiniestros(props) {
     )
 }
 
-export default withRouter(HistorialSiniestros);
+export default withRouter(HistorialRegistros);

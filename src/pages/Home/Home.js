@@ -15,6 +15,7 @@ import NuevoRegistro from '../NuevoRegistro/NuevoRegistro';
 import NuevoReporte from '../Reportes/Reportes';
 import Reclamo from '../Reclamo/Reclamo';
 import Reporte from '../Reporte/Reporte';
+import Registro from '../Registro/Registro';
 
 function Home() {
     return (
@@ -26,9 +27,6 @@ function Home() {
                 </div>
                 <div className="main">
                     <Switch>
-                        <Route path="/home/siniestros">
-                            <Siniestros />
-                        </Route>
                         <Route path="/home/historial">
                             <Historial />
                         </Route>
@@ -41,8 +39,8 @@ function Home() {
                         <Route path="/home/reportes">
                             <NuevoReporte />
                         </Route>
-                        <Route path="/home/siniestro">
-                            <Siniestro />
+                        <Route path="/home/registro">
+                            <Registro/>
                         </Route>
                         <Route path="/home/reclamo">
                             <Reclamo />

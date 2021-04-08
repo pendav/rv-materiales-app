@@ -14,6 +14,7 @@ import Siniestro from '../Siniestro/Siniestro';
 import NuevoRegistro from '../NuevoRegistro/NuevoRegistro';
 import NuevoReporte from '../Reportes/Reportes';
 import Reclamo from '../Reclamo/Reclamo';
+import Reporte from '../Reporte/Reporte';
 
 function Home() {
     return (
@@ -45,6 +46,9 @@ function Home() {
                         </Route>
                         <Route path="/home/reclamo">
                             <Reclamo />
+                        </Route>
+                        <Route path="/home/reporte">
+                            <Reporte/>
                         </Route>
                     </Switch>
                 </div>

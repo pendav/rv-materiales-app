@@ -7,10 +7,8 @@ import {
     Switch,
     Route
 } from "react-router-dom";
-import Siniestros from '../Siniestros/Siniestros';
 import Historial from '../Historial/Historial';
 import Usuarios from '../Usuarios/Usuarios';
-import Siniestro from '../Siniestro/Siniestro';
 import NuevoRegistro from '../NuevoRegistro/NuevoRegistro';
 import NuevoReporte from '../Reportes/Reportes';
 import Reclamo from '../Reclamo/Reclamo';

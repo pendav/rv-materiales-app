@@ -139,7 +139,7 @@ function FormSiniestros() {
                     </div>
                 </div>
             </div>
-          
+            <div className="row"></div>
             <div className="row">
                 <div className="column">
                     <div className="column">
@@ -281,6 +281,7 @@ function FormSiniestros() {
                     </div>
                             
             </div>
+            <div className="row"></div>
             <div className="row">
                 <div className="column">
                     <TextField id="TipoMaterial" label="Tipo de material" className="textField" variant="outlined" size="small" />

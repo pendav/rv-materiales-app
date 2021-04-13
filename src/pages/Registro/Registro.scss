@@ -17,14 +17,20 @@
                 margin-right: 0;
             }
             .name {
-                font-size: 1.5625rem;
-                color: #192e47;
+                font-size: 1rem;
+                color: #346298;
                 font-weight: bold;
+            }
+            .date {
+                font-size: 1rem;
+                color: #707070;
+                font-weight: normal !important;
             }
             .miniTitle {
                 color: #192e47;
                 font-size: 0.875rem;
                 font-weight: bold;
+                margin-bottom: 4px;
             }
             .miniValue {
                 color: #707070;
@@ -45,7 +51,7 @@
             justify-content: space-between;
             svg {
                 width: 1.5rem;
-                height: 1.5rem;
+                height: 1rem;
                 margin-right: 0.625rem;
             }
             span {
@@ -66,7 +72,7 @@
         .column-lg {
             display: flex;
             box-sizing: border-box;
-            width: 75%;
+            width: 100%;
             margin-right: 1.25rem;
             &:last-child {
                 margin-right: 0;
@@ -75,6 +81,7 @@
                 color: #192e47;
                 font-size: 0.875rem;
                 font-weight: bold;
+                margin-bottom: 4px;
             }
             .miniValue {
                 color: #707070;

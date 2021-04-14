@@ -1,5 +1,5 @@
 import React from 'react'
-import FilterSiniestros from '../../components/FilterSiniestros/FilterSiniestros'
+import FilterHistorial from '../../components/FilterHistorial/FilterHistorial'
 import Graficas from '../../components/Graficas/Graficas'
 import HistorialRegistros from '../../components/HistorialRegistros/HistorialRegistros'
 import './Historial.scss'
@@ -7,7 +7,7 @@ import './Historial.scss'
 function Historial() {
     return (
         <div className="historial">
-            <FilterSiniestros></FilterSiniestros>
+            <FilterHistorial></FilterHistorial>
             <Graficas></Graficas>
             <HistorialRegistros title="Resultados de busqueda"></HistorialRegistros>
         </div>

@@ -4,13 +4,19 @@
     display: flex;
     .doughnut {
         width: 30%;
+        .cantidad {
+            font-size: 1rem;
+            color: #192E47;
+            margin: 0.8rem 1.5rem 0.5rem;
+            text-align: center;
+        }
     }
     .wrapper {
         width: 70%;
         .row{
             width: 100%;
             display: flex;
-            margin-top: 25px;
+            margin-top: 2rem;
             .column {
                 display: flex;
                 box-sizing: border-box;
@@ -25,6 +31,11 @@
                     color: #192E47;
                     font-weight: bold;
                     margin: 0.5rem 1.5rem;
+                }
+                .cantidad {
+                    font-size: 1rem;
+                    color: #192E47;
+                    margin: 0.8rem 1.5rem 0.5rem;
                 }
             }
         }

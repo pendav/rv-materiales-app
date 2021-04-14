@@ -30,45 +30,78 @@ const Graficas = () => {
         <div className="graficas">
             <div className="doughnut">
                 <Doughnut data={data} />
+                <div className="cantidad">
+                    1,420 Resultados
+                </div>
             </div>
             <div className="wrapper">
                 <div className="row">
                     <div className="column">
                         <img src={green} alt="green" />
-                        <div className="monto">
-                            Monto aceptado
+                        <div>
+                            <div className="monto">
+                                Monto aceptado
+                            </div>
+                            <div className="cantidad">
+                                $923,826.48
+                            </div>
                         </div>
                     </div>
                     <div className="column">
                         <img src={blue} alt="blue" />
-                        <div className="monto">
-                            Monto reclamado
+                        <div>
+                            <div className="monto">
+                                Monto reclamado
+                            </div>
+                            <div className="cantidad">
+                                $245,174,557.26
+                            </div>
                         </div>
                     </div>
                     <div className="column">
                         <img src={yellow} alt="yellow" />
-                        <div className="monto">
-                            Monto en proceso
+                        <div>
+                            <div className="monto">
+                                Monto en proceso
+                            </div>
+                            <div className="cantidad">
+                                $5,184,978.54
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div className="row">
                     <div className="column">
                         <img src={gray} alt="gray" />
-                        <div className="monto">
-                            Monto cancelado
+                        <div>
+                            <div className="monto">
+                                Monto cancelado
+                            </div>
+                            <div className="cantidad">
+                                $923,826.48
+                            </div>
                         </div>
                     </div>
                     <div className="column">
                         <img src={purple} alt="purple" />
-                        <div className="monto">
-                            Monto recuperado
+                        <div>
+                            <div className="monto">
+                                Monto recuperado
+                            </div>
+                            <div className="cantidad">
+                                $128,711,532.57
+                            </div>
                         </div>
                     </div>
                     <div className="column">
                         <img src={red} alt="red" />
-                        <div className="monto">
-                            Monto rechazado
+                        <div>
+                            <div className="monto">
+                                Monto rechazado
+                            </div>
+                            <div className="cantidad">
+                                $110,339,219.85
+                            </div>
                         </div>
                     </div>
                 </div>

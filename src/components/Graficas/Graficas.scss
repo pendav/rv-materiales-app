@@ -1,0 +1,32 @@
+.graficas {
+    width: 100%;
+    border-top: 0.5px solid #d1d1d1;
+    display: flex;
+    .doughnut {
+        width: 30%;
+    }
+    .wrapper {
+        width: 70%;
+        .row{
+            width: 100%;
+            display: flex;
+            margin-top: 25px;
+            .column {
+                display: flex;
+                box-sizing: border-box;
+                width: 50%;
+                margin-right: 20px;
+                justify-content: center;
+                &:last-child {
+                    margin-right: 0;
+                }
+                .monto {
+                    font-size: 1rem;
+                    color: #192E47;
+                    font-weight: bold;
+                    margin: 0.5rem 1.5rem;
+                }
+            }
+        }
+    }
+}

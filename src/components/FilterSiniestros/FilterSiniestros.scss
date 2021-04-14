@@ -81,7 +81,15 @@
             width: 164px;
         }
     }
+    
     .textField {
         width: 100%;
+    }
+    .icon-more{
+        cursor: pointer;
+    }
+    .icon-less{
+        cursor: pointer;
+        display: none;
     }
 }

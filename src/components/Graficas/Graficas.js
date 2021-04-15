@@ -10,11 +10,6 @@ import blue from '../../assets/img/blue_graph.png';
 
 const Graficas = () => {
     const data = {
-        labels: [
-            'Red',
-            'Blue',
-            'Yellow'
-        ],
         datasets: [{
             label: 'My First Dataset',
             data: [300, 50, 100],

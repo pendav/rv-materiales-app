@@ -30,7 +30,7 @@ function FilterSiniestros() {
         <div className="filterSiniestros">
             <div className="row-space">
                 <div className="title" onClick={toggle}>Filtros de busqueda 
-                {state ? <span ><ExpandLessIcon /></span> : <span><ExpandMoreIcon /></span>}
+                {state ? <span style={{marginLeft: '10px'}}><ExpandLessIcon /></span> : <span style={{marginLeft: '10px'}}><ExpandMoreIcon /></span>}
                 </div>
                 
                 <div className="column">

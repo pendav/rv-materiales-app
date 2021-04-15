@@ -4,7 +4,7 @@ import {
     FormControl, MenuItem, Button,
     InputAdornment
 } from '@material-ui/core';
-import './FilterSiniestros.scss'
+import './FilterHistorial.scss'
 import { ReactComponent as Lupa } from '../../assets/img/lupa.svg';
 import {
     KeyboardDatePicker,
@@ -17,8 +17,7 @@ import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
 
 
-function FilterSiniestros() {
-    const onDateChanges = (date, date2) => console.log(" date is ", date, date2);
+function FilterHistorial() {
     const [selectedDate, handleDateChange] = useState(new Date());
     const [state, setState] = useState(false);
 
@@ -27,7 +26,7 @@ function FilterSiniestros() {
       }
     
     return (
-        <div className="filterSiniestros">
+        <div className="filterHistorial">
             <div className="row-space">
                 <div className="title" onClick={toggle}>Filtros de busqueda 
                 {state ? <span ><ExpandLessIcon /></span> : <span><ExpandMoreIcon /></span>}
@@ -215,4 +214,4 @@ function FilterSiniestros() {
     )
 }
 
-export default FilterSiniestros
+export default FilterHistorial

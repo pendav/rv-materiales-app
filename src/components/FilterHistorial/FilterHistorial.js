@@ -67,6 +67,18 @@ function FilterHistorial() {
                     </div>
                     <div className="column">
                         <FormControl variant="outlined" className="textField" size="small">
+                            <InputLabel htmlFor="outlined-planta">Planta</InputLabel>
+                            <Select
+                                labelId="outlined-planta"
+                                id="planta"
+                                label="Planta"
+                            >
+                                <MenuItem value={'Pagado'}>Pagado</MenuItem>
+                            </Select>
+                        </FormControl>
+                    </div>
+                    <div className="column">
+                        <FormControl variant="outlined" className="textField" size="small">
                             <InputLabel htmlFor="outlined-tipo-evento">Tipo de evento</InputLabel>
                             <Select
                                 labelId="outlined-tipo-evento"
@@ -90,18 +102,6 @@ function FilterHistorial() {
                         </FormControl>
                     </div>
                     <div className="column">
-                        <FormControl variant="outlined" className="textField" size="small">
-                            <InputLabel htmlFor="outlined-transportista">Transportista</InputLabel>
-                            <Select
-                                labelId="outlined-transportista"
-                                id="transportista"
-                                label="Transportista"
-                            >
-                                <MenuItem value={'Jaime Flores'}>Jaime Flores</MenuItem>
-                            </Select>
-                        </FormControl>
-                    </div>
-                    <div className="column">
                         <MuiPickersUtilsProvider utils={DateFnsUtils} locale={esLocale}>
                             <KeyboardDatePicker
                                 disableToolbar
@@ -118,6 +118,22 @@ function FilterHistorial() {
                         </MuiPickersUtilsProvider>
                     </div>
                     <div className="column">
+                        <FormControl variant="outlined" className="textField" size="small">
+                            <InputLabel htmlFor="outlined-transportista">Transportista</InputLabel>
+                            <Select
+                                labelId="outlined-transportista"
+                                id="transportista"
+                                label="Transportista"
+                            >
+                                <MenuItem value={'Jaime Flores'}>Jaime Flores</MenuItem>
+                            </Select>
+                        </FormControl>
+                    </div>
+                </div>
+
+
+                <div className="row">
+                <div className="column">
                         <MuiPickersUtilsProvider utils={DateFnsUtils} locale={esLocale}>
                             <KeyboardDatePicker
                                 disableToolbar
@@ -133,11 +149,6 @@ function FilterHistorial() {
                             />
                         </MuiPickersUtilsProvider>
                     </div>
-
-                </div>
-
-
-                <div className="row">
                     <div className="column">
                         <MuiPickersUtilsProvider utils={DateFnsUtils} locale={esLocale}>
                             <KeyboardDatePicker
@@ -205,9 +216,7 @@ function FilterHistorial() {
                                 <MenuItem value={'Ruta'}>Ruta</MenuItem>
                             </Select>
                         </FormControl>
-                    </div>
-                    <div className="column">
-                    </div>
+                    </div>                    
                 </div>
             </div>
         </div>

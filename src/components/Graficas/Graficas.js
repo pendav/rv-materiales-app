@@ -1,12 +1,6 @@
 import React from 'react';
 import { Doughnut } from 'react-chartjs-2';
 import './Graficas.scss';
-import green from '../../assets/img/green_graph.png';
-import gray from '../../assets/img/gray_graph.png';
-import red from '../../assets/img/red_graph.png';
-import yellow from '../../assets/img/yellow_graph.png';
-import purple from '../../assets/img/purple_graph.png';
-import blue from '../../assets/img/blue_graph.png';
 
 const Graficas = () => {
     const data = {
@@ -17,6 +11,66 @@ const Graficas = () => {
                 'rgb(255, 99, 132)',
                 'rgb(54, 162, 235)',
                 'rgb(255, 205, 86)'
+            ],
+            hoverOffset: 4
+        }]
+    };
+    const dataAceptado = {
+        datasets: [{
+            label: 'My First Dataset',
+            data: [100],
+            backgroundColor: [
+                '#4BC08D',
+            ],
+            hoverOffset: 4
+        }]
+    };
+    const dataReclamado = {
+        datasets: [{
+            label: 'My First Dataset',
+            data: [100],
+            backgroundColor: [
+                '#4B87C0',
+            ],
+            hoverOffset: 4
+        }]
+    };
+    const dataProceso = {
+        datasets: [{
+            label: 'My First Dataset',
+            data: [100],
+            backgroundColor: [
+                '#F5C816',
+            ],
+            hoverOffset: 4
+        }]
+    };
+    const dataCancelado = {
+        datasets: [{
+            label: 'My First Dataset',
+            data: [100],
+            backgroundColor: [
+                '#555555',
+            ],
+            hoverOffset: 4
+        }]
+    };
+    const dataRecuperado = {
+        datasets: [{
+            label: 'My First Dataset',
+            data: [100],
+            backgroundColor: [
+                '#804BC0',
+            ],
+            hoverOffset: 4
+        }]
+    };
+    const dataRechazado = {
+        datasets: [{
+            label: 'My First Dataset',
+            data: [100],
+            backgroundColor: [
+                '#D53535',
             ],
             hoverOffset: 4
         }]
@@ -32,7 +86,9 @@ const Graficas = () => {
             <div className="wrapper">
                 <div className="row">
                     <div className="column">
-                        <img src={green} alt="green" />
+                        <div className="graph">
+                            <Doughnut data={dataAceptado} />
+                        </div>
                         <div>
                             <div className="monto">
                                 Monto aceptado
@@ -43,7 +99,9 @@ const Graficas = () => {
                         </div>
                     </div>
                     <div className="column">
-                        <img src={blue} alt="blue" />
+                        <div className="graph">
+                            <Doughnut data={dataReclamado} />
+                        </div>
                         <div>
                             <div className="monto">
                                 Monto reclamado
@@ -54,7 +112,9 @@ const Graficas = () => {
                         </div>
                     </div>
                     <div className="column">
-                        <img src={yellow} alt="yellow" />
+                        <div className="graph">
+                            <Doughnut data={dataProceso} />
+                        </div>
                         <div>
                             <div className="monto">
                                 Monto en proceso
@@ -67,7 +127,9 @@ const Graficas = () => {
                 </div>
                 <div className="row">
                     <div className="column">
-                        <img src={gray} alt="gray" />
+                        <div className="graph">
+                            <Doughnut data={dataCancelado} />
+                        </div>
                         <div>
                             <div className="monto">
                                 Monto cancelado
@@ -78,7 +140,9 @@ const Graficas = () => {
                         </div>
                     </div>
                     <div className="column">
-                        <img src={purple} alt="purple" />
+                        <div className="graph">
+                            <Doughnut data={dataRecuperado} />
+                        </div>
                         <div>
                             <div className="monto">
                                 Monto recuperado
@@ -89,7 +153,9 @@ const Graficas = () => {
                         </div>
                     </div>
                     <div className="column">
-                        <img src={red} alt="red" />
+                        <div className="graph">
+                            <Doughnut data={dataRechazado} />
+                        </div>
                         <div>
                             <div className="monto">
                                 Monto rechazado
